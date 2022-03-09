@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: "/users/create") do |f| %>
+    <%= form_for(@user, url: "/signup") do |f| %>
       <%= render 'shared/error_messages' %>
 
       <%= f.label :name %>
@@ -15,10 +15,10 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "パスワード（確認用）" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "アカウント作成", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

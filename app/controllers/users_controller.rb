@@ -10,7 +10,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+        #sessions　helperで定義したlog_inメソッド
+      log_in @user
+      flash[:success] = "サンプルアプリへようこそ！"
         #ユーザーの詳細画面に自動で変換してくれる
       redirect_to @user
       # 保存の成功をここで扱う。

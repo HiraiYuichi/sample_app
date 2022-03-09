@@ -7,6 +7,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem "rails", "~> 7.0.1"
 gem 'bcrypt',         '3.1.12'
 gem 'bootstrap-sass', '3.3.7'
+gem 'rails-i18n'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

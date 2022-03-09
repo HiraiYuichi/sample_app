@@ -1,16 +1,16 @@
-Rails.application.routes.draw do
-  get 'users/new'
-  #root 'static_pages#home'
-  #get  '/help',    to: 'static_pages#help'
-  #get  '/about',   to: 'static_pages#about'
-  #get  '/contact', to: 'static_pages#contact'
-  root 'static_pages#home'
-  get  'static_pages/home'
-  get  'static_pages/help'
-  get  'static_pages/about'
-  get  'static_pages/contact'
-  get  'users/new'
-  post 'users/create'
-  resources :users
-  #Usersリソースを追加
+Rails.application.routes.draw do 
+ root 'static_pages#home'
+ get  '/help'=>'static_pages#help'
+ get  '/about'=>'static_pages#about'
+ get  '/contact'=>'static_pages#contact'
+ 
+ get  '/signup'=>'users#new'
+post '/signup'=> 'users#create'
+ 
+ #sessionsリソースの名前付きルートを追加
+ get    '/login'=>'sessions#new'
+ post   '/login'=> 'sessions#create'
+ get    '/logout'=>'sessions#destroy'
+ resources :users
+
 end
