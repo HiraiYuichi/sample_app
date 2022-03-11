@@ -11,6 +11,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       #log_inメソッド（session[:user_id]にuser.idを代入）
       log_in user
+       #params[:session][:remember_me]が1の時userを記憶　そうでなければuserを忘れる
+       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+       #Sessionsヘルパーのrememberメソッド
+       #user_url(user)　という名前付きルートになる
+       remember user
       #詳細画面にリダイレクト
       redirect_to user
     else
@@ -20,7 +25,7 @@ class SessionsController < ApplicationController
   end
   def destroy
      #ログアウトする（sessions_helperのlog_outメソッド
-    log_out
+     log_out if logged_in?
     #ルートURLにリダイレクト
     redirect_to    root_url
   end
