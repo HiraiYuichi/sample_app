@@ -1,0 +1,11 @@
+<% provide(:title, t('.all_users')) %>
+<h1><%= t('.all_users') %></h1>
+ 
+<%= will_paginate @users, previous_label: '&lt 前へ', next_label: '次へ &gt' %>
+<ul class="users">
+  <!--eachメソッドでユーザー情報を1個ずつ取り出す-->
+  <% @users.each do |user| %>
+    <%= render @users %>
+  <% end %>
+</ul>
+<%= will_paginate @users, previous_label: '&lt 前へ', next_label: '次へ &gt' %>

@@ -4,8 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 #ruby "2.7.5"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+
+gem 'jquery-rails'
 gem "rails", "~> 7.0.1"
 gem 'bcrypt',         '3.1.12'
+gem 'faker'
+gem 'turbolinks', '5.2.0'
+gem 'will_paginate', '3.1.7' # will_paginateのバージョンをあげた
+gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass', '3.3.7'
 gem 'rails-i18n'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

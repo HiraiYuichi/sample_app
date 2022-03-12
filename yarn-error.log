@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/heroku/bin/node /usr/share/yarn/bin/yarn.js build:css
+  /usr/local/heroku/bin/node /usr/share/yarn/bin/yarn.js add rails-ujs
 
 PATH: 
   /home/yuichi/.rbenv/shims:/home/yuichi/.rbenv/bin:/home/yuichi/.rbenv/shims:/home/yuichi/.rbenv/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
